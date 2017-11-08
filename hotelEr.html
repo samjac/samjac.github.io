@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="hotelEr.css">
+		
+		<script type="text/javascript" src="scriptel.js" ></script>
+	</head>
+	<body>
+		<h1>L'Amani Suite <br>
+			<img src="http://images.clipartpanda.com/human-heart-clipart-black-and-white-KijraBziq.svg" width="10%">
+		</h1>
+		
+			<button onclick="hRooms()" id="btn">BOOK NOW</button>
+			<button onclick="begin()" id="redo">RE-DO</button>
+			<div id="blue">
+				<h2>Room Type</h2>
+
+				<ul> 
+					<li> Presidential</li>
+					<li> Deluxe</li>
+					<li> Royal</li>
+
+				</ul>
+				
+			</div>
+
+			<div id="suite">
+			Presidential <br>
+				<input type="text" id="PListe">
+				<br>
+				<button onclick="addGuest()">Add</button><br>
+			
+			Deluxe<br>
+				<input type="text" id="DListe">
+				<br>
+				<button onclick="addGuest2()">Add</button><br>
+			Royal<br>
+				<input type="text" id="RListe">
+				<br>
+				<button onclick="addGuest3()">Add</button>
+			</div>
+
+		
+			<ol id="PRoom">Presidential Suite</ol>
+			<ol id="DRoom">Deluxe Suite</ol>
+			<ol id="RRoom">Royal Suite</ol>
+		
+
+		
+	</body>
+</html>

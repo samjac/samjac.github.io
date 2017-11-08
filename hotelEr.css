@@ -1,0 +1,97 @@
+body {
+	background-image: url('http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1444253482/DG2015-paris.jpg?itok=XH81cBH9');
+}
+
+
+h1 {
+	height: 300px ;
+	color: #ffffff;
+	font-size: 100px;
+	text-align: center;
+	background: #8e063b;
+	position: relative;
+	margin-top: 0px;
+}
+#btn {
+	height: 50px;
+	background: #000000;
+	color: #ffffff;
+	border: none;
+}
+#redo {
+	height: 50px;
+	background: #000000;
+	color: #ffffff;
+	margin-top: -50px;
+	margin-left: 100px;
+	border: none;
+	display: none;
+}
+
+#blue {
+	width: 300px;
+	height: 150px;
+	background: #0ec4ec;
+	color: #ffffff;
+	text-align: left;
+	font-size: 25px;
+	display: none;
+	margin-top: 10px;
+
+
+	
+}
+#suite {
+	width: 300px;
+	float: left;
+	background: #d4e2e5;
+	border-color: #000000;
+	margin-top: 0px;
+	margin-left: 0px;
+	display: none;
+}
+
+
+#PRoom {
+	width: 200px;
+	height: 350px;
+	background: #16c7ee;
+	color: #ffffff;
+	margin-top: -150px;
+	margin-left: 100px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+	display: none;
+	float: left;
+}
+
+#DRoom {
+	width: 200px;
+	height: 350px;
+	background: #0c5b6c;
+	color: #ffffff;
+	margin-top: -150px;
+	margin-left: 10px;
+	border-width: 2px;
+	border-color: #000000;
+	border-style: solid;
+	display: none;
+	float: left;
+	
+}
+#RRoom {
+	width: 200px;
+	height: 350px;
+	background: #1589a3;
+	color: #ffffff;
+	margin-left: 10px;
+	margin-top: -150px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+	display: none;
+	float: left;
+	
+}
+
