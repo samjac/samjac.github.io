@@ -97,10 +97,10 @@ function update() {
         player.body.velocity.x = 150;
         player.animations.play('right');
     }
-    else if (cursors.up.isDown) {
+    else if (cursors.up.isClicked) {
 	    player.body.velocity.y = -200;
     }
-    else if (cursors.down.isDown) {
+    else if (cursors.down.isClicked) {
 	    player.body.velocity.y = 200;
     }
     else
@@ -123,7 +123,6 @@ function collectStar (player, star) {
     //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
-    score.style.color = #ffffff;
 }
 </script>
 
