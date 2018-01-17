@@ -28,11 +28,11 @@ var score = 0;
 var scoreText;
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
-    game.physics.startSystem(Phaser.Physics.P2JS);
+    game.physics.startSystem(Phaser.Physics.ARCADE);
     //  A simple background for our game
     game.add.sprite(0, 0, 'sky');
-    game.world.setBounds(0, 0, 1920, 600);
-    game.camera.follow(player);
+    //game.world.setBounds(0, 0, 1920, 600);
+    //game.camera.follow(player);
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
     //  We will enable physics for any object that is created in this group
@@ -51,7 +51,7 @@ function create() {
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'dude');
     //  We need to enable physics on the player
-    game.physics.p2.enable(player);
+    game.physics.ARCADE.enable(player);
     //  Player physics properties. Give the little guy a slight bounce.
     player.body.bounce.y = 0.2;
     player.body.gravity.y = 300;
