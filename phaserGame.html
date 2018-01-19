@@ -18,7 +18,7 @@ function preload() {
     game.load.image('sky', 'assets/skull.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/runningcat.png', 500, 100);
+    game.load.spritesheet('dude', 'assets/runboy.png', 150, 100);
 }
 var player;
 var platforms;
@@ -57,8 +57,8 @@ function create() {
     player.body.gravity.y = 300;
     player.body.collideWorldBounds = true;
     //  Our two animations, walking left and right.
-    player.animations.add('left', [0, 1, 2, 3, 4, 5, 6], 10, true);
-    player.animations.add('right', [0,1, 2, 3, 4, 5, 6], 10, true);
+    player.animations.add('left', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 10, true);
+    player.animations.add('right', [9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 10, true);
     //  Finally some stars to collect
     stars = game.add.group();
     //  We will enable physics for any star that is created in this group
