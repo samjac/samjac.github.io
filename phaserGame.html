@@ -68,6 +68,7 @@ function create() {
     {
         //  Create a star inside of the 'stars' group
         var star = stars.create(i * 70, 0, 'star');
+	star.scale.setTo(0.5, 0.5);
         //  Let gravity do its thing
         star.body.gravity.y = 300;
         //  This just gives each star a slightly random bounce value
