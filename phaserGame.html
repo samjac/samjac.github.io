@@ -54,7 +54,7 @@ function create() {
     ledge.body.immovable = true;
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'dude');
-    button = game.add.button(game.world.height -150 , 'button', actionOnClick);
+    button = game.add.button(game.world.centerx -95, 400 , 'button', actionOnClick);
 	//function actionOnClick() {
 		
     //  We need to enable physics on the player
