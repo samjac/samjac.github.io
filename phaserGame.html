@@ -27,13 +27,15 @@ var cursors;
 var stars;
 var score = 0;
 var scoreText;
-	
-//var button;
+
+var background;
+var button;
 	
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
     //  A simple background for our game
+    game.stage.backgroundcolor = #182d3b;
     game.add.sprite(0, 0, 'sky');
     
     
@@ -54,8 +56,10 @@ function create() {
     ledge.body.immovable = true;
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'dude');
-    //button = game.add.button(game.world.centerX -95, 400 , 'button', actionOnClick, this , 2, 1, 0);
-	
+    button = game.add.button(game.world.centerX -95, 400 , 'button', actionOnClick, this , 2, 1, 0);
+	button.onInputOver.add(over, this);
+	button.onInputOut.add(out, this);
+	button.onInputUp.add(up, this);
 		
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
@@ -87,6 +91,11 @@ function create() {
     cursors = game.input.keyboard.createCursorKeys();
     
 }
+	
+function actionOnClick() {
+	background.visible =! background.visible;
+}
+	
 function update() {
     //  Collide the player and the stars with the platforms
     game.physics.arcade.collide(player, platforms);
