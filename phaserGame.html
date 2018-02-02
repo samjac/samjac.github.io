@@ -13,13 +13,13 @@
 <body>
 
 <script type="text/javascript">
-var game = new Phaser.Game(1000, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 function preload() {
     game.load.image('sky', 'assets/skull.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/cat.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
-    game.load.spritesheet('button','assets/blue-button.png', 890, 221);
+    //game.load.spritesheet('button','assets/blue-button.png', 890, 221);
 }
 var player;
 var platforms;
@@ -28,7 +28,7 @@ var stars;
 var score = 0;
 var scoreText;
 	
-var button;
+//var button;
 	
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
@@ -54,7 +54,7 @@ function create() {
     ledge.body.immovable = true;
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'dude');
-    button = game.add.button(game.world.centerX -95, 400 , 'button', actionOnClick, this , 2, 1, 0);
+    //button = game.add.button(game.world.centerX -95, 400 , 'button', actionOnClick, this , 2, 1, 0);
 	
 		
     //  We need to enable physics on the player
