@@ -97,6 +97,12 @@ function update() {
         player.body.velocity.x = 150;
         player.animations.play('right');
     }
+    else if(cursors.down.isDown) {
+	    player.body.velocity.x = -150;
+    }
+    else if(cursors.up.isDown) {
+	    player.body.velocity.x = 150;
+    }
     else
     {
         //  Stand still
