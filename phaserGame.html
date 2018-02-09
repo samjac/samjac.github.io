@@ -34,7 +34,8 @@ var score = 0;
 var scoreText;
 
 function create() {
-	game.add.image(0, 0, 'backg');
+	var background = game.add.image(0, 0, 'backg');
+	background.scale.setTo(0.5, 0.5); 
     
 }
 
