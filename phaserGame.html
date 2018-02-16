@@ -21,7 +21,7 @@ function preload() {
     game.load.image('backg', 'assets/fantasy-bg.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('bird', 'assets/piskel-bird.png', 32, 32);
 
 }
 
@@ -36,6 +36,8 @@ var scoreText;
 function create() {
 	var background = game.add.image(0, 0, 'backg');
 	background.scale.setTo(0.5, 0.5); 
+	
+	player = game.add.sprite(50, 300, 'bird');
     
 }
 
