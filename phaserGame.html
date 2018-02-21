@@ -35,8 +35,9 @@ var score = 0;
 
 function create() {
 	game.physics.startSystem(Phaser.Physics.ARCADE);
-	var background = game.add.image(0, 0, 'backg');
-	background.scale.setTo(0.5, 0.5); 
+	
+	game.add.image(0, 0, 'backg');
+	//background.scale.setTo(0.5, 0.5); 
 	
 	player = game.add.sprite(50, game.world.height - 150, 'bird');
 	
