@@ -117,9 +117,7 @@ function update() {
         player.frame = 0;
     }
     
-function move(buddies) {
-	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
-}
+
     //  Allow the player to jump if they are touching the ground.
    // if (cursors.up.isDown && player.body.touching.down)
     //{
@@ -132,6 +130,9 @@ function collectStar (player, star) {
     star.kill();
     buddies.create(Math.random()*200, Math.random()*200, 'bird');
     buddies.forEach(move);
+	function move(buddies) {
+	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
+}
     //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
