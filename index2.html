@@ -128,7 +128,7 @@ function collectStar (player, star) {
     // Removes the star from the screen
     star.kill();
     buddies.create(Math.random()*200, Math.random()*200, 'bird');
-    if ( left.isDown || right.isDown || up.isDown || down.isDown) {
+    if (left.isDown || right.isDown || up.isDown || down.isDown) {
     	buddies.forEach(move);
     }
 	
