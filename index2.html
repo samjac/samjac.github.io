@@ -119,7 +119,7 @@ function update() {
     
 	 
 if (left.isDown || right.isDown || up.isDown || down.isDown) {
-    	buddies.forEach(move);
+    	move();
     }
     //  Allow the player to jump if they are touching the ground.
    // if (cursors.up.isDown && player.body.touching.down)
