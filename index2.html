@@ -124,10 +124,15 @@ function collectStar (player, star) {
     // Removes the star from the screen
     star.kill();
 	
-    game.add.sprite(0,0, 'bird');
+    
     //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
+	
+    
+for (i = 0; i < score; i++) {
+    	game.add.sprite(0,0, 'bird');
+    }
 }
 </script>
 
