@@ -117,13 +117,15 @@ function update() {
         player.frame = 0;
     }
     
-
+function move(buddies) {
+	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
+}
     //  Allow the player to jump if they are touching the ground.
    // if (cursors.up.isDown && player.body.touching.down)
     //{
         //player.body.velocity.y = -350;
     //}
-
+}
 function collectStar (player, star) {
     
     // Removes the star from the screen
@@ -140,12 +142,10 @@ function collectStar (player, star) {
 	//var x = Math.floor(Math.random()* 50);
 	//var y = Math.floor(Math.random()* 50);
 }
-function move(buddies) {
-	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
-}
+
 	
-}	
+	
 </script>
 
 </body>
-</html>s
+</html>
