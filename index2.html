@@ -126,7 +126,7 @@ function collectStar (player, star) {
     
     // Removes the star from the screen
     star.kill();
-    createBirds();
+    buddies.create(Math.random()*200, Math.random()*200, 'bird');
     
     //  Add and update the score
     score += 10;
@@ -139,11 +139,7 @@ function collectStar (player, star) {
 	//var y = Math.floor(Math.random()* 50);
 }
 	
-	function createBirds() {
-		
-		buddies.create(0, 0, 'bird');
-    	
-}
+	
 </script>
 
 </body>
