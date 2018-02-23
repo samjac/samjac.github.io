@@ -126,7 +126,7 @@ function collectStar (player, star) {
     
     // Removes the star from the screen
     star.kill();
-    buddies.create(Math.random()*200, Math.random()*200, 'bird');
+    buddies.create(Math.random()*200, Math.random()*200, 'bird').alignTo(player);
     
     //  Add and update the score
     score += 10;
