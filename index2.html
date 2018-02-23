@@ -34,6 +34,7 @@ function create() {
     //  A simple background for our game
     game.add.sprite(0, 0, 'sky');
     buddies = game.add.group();
+	buddies.enableBody = true;
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
     //  We will enable physics for any object that is created in this group
@@ -96,6 +97,7 @@ function update() {
         //  Move to the left
         player.body.velocity.x = -150;
         player.animations.play('left');
+	
     }
     else if (cursors.right.isDown)
     {
@@ -129,10 +131,7 @@ function collectStar (player, star) {
     // Removes the star from the screen
     star.kill();
     buddies.create(Math.random()*200, Math.random()*200, 'bird');
-    buddies.forEach(move);
-	function move(buddies) {
-	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
-}
+    buddies.forEach(game.physics.arcade.moveToPointer, game.physics.arcade, false, 200);
     //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
