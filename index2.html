@@ -31,6 +31,7 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     //  A simple background for our game
     game.add.sprite(0, 0, 'sky');
+   
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
     //  We will enable physics for any object that is created in this group
@@ -48,6 +49,7 @@ function create() {
     ledge.body.immovable = true;
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'bird');
+    var followers = game.add.group();
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
     //  Player physics properties. Give the little guy a slight bounce.
@@ -130,11 +132,11 @@ function collectStar (player, star) {
     scoreText.text = 'Score: ' + score;
 	
     
-for (i = 0; i < score; i++) {
-	var x = Math.round(Math.random() * 800);
-	var y = Math.round(Math.random() * 800);
-    	game.add.sprite(x,y, 'bird', 1);
-    }
+for (var i = 0; i < score; i++) {
+	//var x = Math.round(Math.random() * 800);
+	//var y = Math.round(Math.random() * 800);
+    	followers.add(player);
+    }*/
 }
 </script>
 
