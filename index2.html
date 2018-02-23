@@ -117,6 +117,10 @@ function update() {
         player.frame = 0;
     }
     
+	 
+if (left.isDown || right.isDown || up.isDown || down.isDown) {
+    	buddies.forEach(move);
+    }
     //  Allow the player to jump if they are touching the ground.
    // if (cursors.up.isDown && player.body.touching.down)
     //{
@@ -128,10 +132,6 @@ function collectStar (player, star) {
     // Removes the star from the screen
     star.kill();
     buddies.create(Math.random()*200, Math.random()*200, 'bird');
-    if (left.isDown || right.isDown || up.isDown || down.isDown) {
-    	buddies.forEach(move);
-    }
-	
     
     //  Add and update the score
     score += 10;
