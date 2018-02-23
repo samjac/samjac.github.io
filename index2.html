@@ -31,7 +31,7 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     //  A simple background for our game
     game.add.sprite(0, 0, 'sky');
-    var buddies = this.add.group();
+    
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
     //  We will enable physics for any object that is created in this group
@@ -138,6 +138,7 @@ function collectStar (player, star) {
 	//var y = Math.floor(Math.random()* 50);
 }
 	function createBirds() {
+		var buddies = this.add.group();
 		var neue = buddies.create(0, 0, 'bird');
     	
 }
