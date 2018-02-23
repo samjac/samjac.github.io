@@ -27,6 +27,7 @@ var stars;
 var score = 0;
 var scoreText;
 var buddies;
+var buddySpeed = 25; 
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -87,7 +88,7 @@ function update() {
     game.physics.arcade.collide(player, platforms);
     game.physics.arcade.collide(stars, platforms);
     //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
-    game.physics.arcade.overlap(player, stars, collectStar, null, this);
+    game.physics.arcade.overlap(player, stars,buddies, collectStar, null, this);
     //  Reset the players velocity (movement)
     player.body.velocity.x = 0;
     if (cursors.left.isDown)
@@ -127,6 +128,10 @@ function collectStar (player, star) {
     // Removes the star from the screen
     star.kill();
     buddies.create(Math.random()*200, Math.random()*200, 'bird');
+    if ( left.isDown || right.isDown || up.isDown || down.isDown) {
+    	buddies.forEach(move);
+    }
+	
     
     //  Add and update the score
     score += 10;
@@ -137,6 +142,9 @@ function collectStar (player, star) {
 //for (var i = 0; i < score; i++) {
 	//var x = Math.floor(Math.random()* 50);
 	//var y = Math.floor(Math.random()* 50);
+}
+function move(buddies) {
+	game.physics.arcade.moveToObject(buddies, player, 60, buddySpeed*3000);
 }
 	
 	
