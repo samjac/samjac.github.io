@@ -131,7 +131,9 @@ function collectStar (player, star) {
 	
     
 for (i = 0; i < score; i++) {
-    	game.add.sprite(0,0, 'bird');
+	var x = Math.round(Math.random() * 5);
+	var y = Math.round(Math.random() * 5);
+    	game.add.sprite(x,y, 'bird');
     }
 }
 </script>
