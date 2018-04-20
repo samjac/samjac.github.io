@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title> Snake Game </title>
+    <script src="p5.js"></script>
+    <script src="snakev2.js"></script>
+    <script src="p5.sound.min.js"></script>
+    
+    <style>
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+      h2 {
+        color: black;
+        text-align: center;
+      }
+    
+      
+    </style>
+  </head>
+
+<body>
+  <h1>Snake Game</h1>
+  <h2 id="showScore"></h2>
+  <h2 id="showPoints"></h2>
+  
+  <script>
+
+    var s;
+    var fRate = 10;
+    var scl = 20;
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    
+  
+    function preload() {
+      soundFormats('mp3', 'ogg');
+      eat = loadSound('wink.mp3');
+    }
+
+    function setup() {
+    createCanvas(500, 500);
+    s = new Snake();
+    foodLocation();
+    }
+    function draw() {
+    background(85,3,47);
+    frameRate(fRate);
+    s.show();
+    s.update();
+    s.destroy();
+    fill(255,0,0);
+    rect(food.x, food.y, scl, scl);
+    if (s.eat(food)) {
+      foodLocation();
+      
+    }
+   
+}
+  function foodLocation() {
+    var cols = floor(width / scl);//make columns 20pix wide
+    var rows = floor(height / scl);//make rows 20pix high
+    food = createVector(floor(random(cols)),floor(random(rows)));//generates random location for food
+    food.mult(scl);
+  }
+    function keyPressed() {
+      if(keyCode === UP_ARROW) {
+        s.dir(0,-1);
+        }
+      else if(keyCode === DOWN_ARROW) {
+        s.dir(0, 1);
+      }
+      else if(keyCode === LEFT_ARROW) {
+        s.dir(-1, 0);
+      }
+      else if(keyCode === RIGHT_ARROW) {
+        s.dir(1,0);
+      }
+    }
+    
+  </script>
+  
+</body>
+</html>
